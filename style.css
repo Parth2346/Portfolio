@@ -25,11 +25,15 @@ nav .brand {
 }
 
 nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: flex-end;
+  scrollbar-width: none;
+}
+nav ul::-webkit-scrollbar {
+  display: none;
+}
 }
 
 nav ul li a {
