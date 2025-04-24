@@ -7,13 +7,26 @@ body {
 }
 
 nav {
-  background-color: #1f1f2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 12px 40px;
+  background-color: #1f1f2e;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   animation: slide-down 1s ease-out;
+}
+
+.nav-logo {
+  color: #00ffd5;
+  font-size: 24px; /* Default font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  flex: 1;
+  text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav ul {
@@ -51,10 +64,6 @@ nav ul li a:hover {
 
 nav ul li a:hover::after {
   width: 100%;
-}
-
-.highlight {
-  color: #a855f7;
 }
 
 .intro-container {
@@ -234,74 +243,9 @@ footer {
   animation: slide-up 1s ease-in-out;
 }
 
-/* ✅ Mobile Responsive Fixes */
+/* Adjust the logo size for smaller screens */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .intro-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .photo-section img {
-    width: 180px;
-    height: 180px;
-    margin: 10px auto;
-  }
-
-  .about-section {
-    margin: 10px auto;
-    padding: 0 15px;
-  }
-
-  .skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 15px;
-  }
-
-  .skill {
-    text-align: center;
-    border-left: none;
-    border-top: 4px solid #00ffd5;
-  }
-
-  .certificates-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .certificates-container img {
-    width: 90%;
-  }
-
-  .contact-form {
-    padding: 0 20px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  nav {
-    padding: 12px 20px;
-  }
-
-  nav ul {
-    justify-content: center;
+  .nav-logo {
+    font-size: 18px; /* Smaller font size on mobile */
   }
 }
