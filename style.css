@@ -224,7 +224,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  @media (max-width: 768px) {
     nav ul {
       gap: 15px;
       flex-wrap: wrap;
@@ -241,4 +240,4 @@ footer {
       align-items: flex-start;
     }
   }
-}
+
