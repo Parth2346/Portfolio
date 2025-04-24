@@ -16,6 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 nav .brand {
@@ -25,15 +26,12 @@ nav .brand {
 }
 
 nav ul {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
-  justify-content: flex-end;
-  scrollbar-width: none;
-}
-nav ul::-webkit-scrollbar {
-  display: none;
-}
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 nav ul li a {
@@ -226,13 +224,21 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav .brand {
-    font-size: 1rem;
+  @media (max-width: 768px) {
+    nav ul {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    nav .brand {
+      font-size: 1rem;
+    }
+  
+    /* Optional: Align brand on mobile */
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
