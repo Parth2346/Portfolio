@@ -21,12 +21,11 @@ nav {
 
 .nav-logo {
   color: #00ffd5;
-  font-size: 24px; /* Default font size */
+  font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   flex: 1;
   text-align: left;
-  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav ul {
@@ -64,6 +63,20 @@ nav ul li a:hover {
 
 nav ul li a:hover::after {
   width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #00ffd5;
 }
 
 .intro-container {
@@ -131,8 +144,6 @@ button:hover {
   color: #e0e0e0;
   text-align: left;
   border-left: 5px solid #00ffd5;
-  opacity: 0;
-  animation: fade-in-slide 1s ease-in-out forwards;
 }
 
 .certificates-container {
@@ -227,25 +238,41 @@ footer {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in {
-  animation: fade-in 1.5s ease-in-out;
-}
-
-.fade-in-slide {
-  animation: fade-in-slide 1.5s ease-in-out forwards;
-}
-
-.slide-in {
-  animation: slide-down 1s ease-out;
-}
-
-.slide-up {
-  animation: slide-up 1s ease-in-out;
-}
-
-/* Adjust the logo size for smaller screens */
+/* Mobile-responsive adjustments */
 @media (max-width: 768px) {
   .nav-logo {
-    font-size: 18px; /* Smaller font size on mobile */
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .skills-container {
+    display: block;
+    overflow-x: scroll;
+  }
+
+  .skill {
+    width: 100%;
+    margin: 10px 0;
   }
 }
