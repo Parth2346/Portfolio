@@ -233,6 +233,8 @@ footer {
 .slide-up {
   animation: slide-up 1s ease-in-out;
 }
+
+/* ✅ Mobile Responsive Fixes */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -247,23 +249,27 @@ footer {
   }
 
   .photo-section img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 10px auto;
   }
 
   .about-section {
-    margin: 10px;
-    padding: 0 10px;
+    margin: 10px auto;
+    padding: 0 15px;
   }
 
   .skills-container {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
   }
 
   .skill {
     text-align: center;
+    border-left: none;
+    border-top: 4px solid #00ffd5;
   }
 
   .certificates-container {
